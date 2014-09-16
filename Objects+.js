@@ -69,13 +69,6 @@ Math.combination = Math.binomial = function (n,k) {
 Math.variation = function (n,k) {
 	if(k<=n) {return Math.factorial(n)/Math.factorial(n-k) } else {return 0}
 }
-// Math Bonus
-Math.lotto = function (chose,numbers) {
-	for (pool=[],a=1;a<=numbers;a++) {pool.push(a)};
-	pool.shuffle();
-	for (draw=[],i=0;i<chose;i++) {draw.push(pool[i])}
-	return draw.sort();
-}
 Math.dice = function (dices,sides,mod) {
 	if(!dices) {dices=1};if(!sides) {sides=6};if(!mod) {mod=0};sum=0;
 	for (i=1;i<=dices;i++) {sum+=Math.ceil(Math.random()*sides)+mod }
